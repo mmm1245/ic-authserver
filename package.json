@@ -1,0 +1,11 @@
+{
+  "name": "ic-sessionserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "mmm1245",
+  "license": "ISC"
+}
