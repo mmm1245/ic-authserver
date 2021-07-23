@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000
 
 let sessionsSaved = {};
 
-let hahahaDatabase = {"mmm1245":"lolheslo","YTblockman":"pog21"};
+let hahahaDatabase = {"mmm1245":{"pwd":"lolheslo","uuid":"81677200-033d-471d-b77a-663ea35720fd"},"YTblockman":{"pwd":"pog21","uuid":"f720bbdc-dd2a-42dd-8df3-32f8023b2e41"}};
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
@@ -14,7 +14,7 @@ app.get('/auth', (req, res) => {
   let token = req.get("token")
   if(sessionsSaved[name] == token){
 	  res.status(200);
-	  res.send("valid")
+	  res.send(hahahaDatabase[name].uuid)
 	  return;
   }
   res.status(403);
@@ -23,7 +23,7 @@ app.get('/auth', (req, res) => {
 app.get('/login', (req, res) => {
   let name = req.get("name")
   let pwd = req.get("password")
-  if(hahahaDatabase[name] == pwd){
+  if(hahahaDatabase[name].pwd == pwd){
 	res.status(200);
 	let token = Math.random()*1548484
     res.send(`${token}`)
