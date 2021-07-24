@@ -4,7 +4,8 @@ const port = process.env.PORT || 3000
 
 let sessionsSaved = {};
 
-let hahahaDatabase = {"mmm1245":{"pwd":"lolheslo","uuid":"81677200-033d-471d-b77a-663ea35720fd"},"YTblockman":{"pwd":"pog21","uuid":"f720bbdc-dd2a-42dd-8df3-32f8023b2e41"}};
+let hahahaDatabase = {"mmm1245":{"pwd":"lolheslo","uuid":"81677200-033d-471d-b77a-663ea35720fd"},"YTblockman":{"pwd":"pog21","uuid":"f720bbdc-dd2a-42dd-8df3-32f8023b2e41"},
+		     "dev_test_account_please_remove_after_publishing":{"pwd":"010","uuid":"11677200-033d-471d-b77a-663ea35720fd"}};
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
